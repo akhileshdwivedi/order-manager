@@ -1,0 +1,81 @@
+-----Add products
+//http://localhost:8080/products
+//POST method
+{
+    "product_id":"notebook_hardcover_red",
+    "name": "Red Notebook",
+    "price": 19.99
+}
+{
+    "product_id":"notebook_hardcover_blue",
+    "name": "Blue Notebook",
+    "price": 18.99
+}
+-----add customer
+//http://localhost:8080/customers
+//POST method
+{
+    "customer_id":"customer-1111",
+    "name": "Chris white"
+}
+{
+    "customer_id":"customer-2222",
+    "name": "Justin Coyne"
+}
+---------Create order
+//http://localhost:8080/orders
+//POST
+{
+    "customer_id": "customer-1111",
+    "order_id":"order-1111",
+    "products": [
+      {
+        "product_id": "notebook_hardcover_red",
+        "name": "Red Notebook",
+        "price": 19.99
+      },
+      {
+        "product_id": "notebook_hardcover_blue",
+        "name": "Blue Notebook",
+        "price": 18.99
+      }
+    ]
+  }
+  {
+    "customer_id": "customer-1111",
+    "order_id":"order-2222",
+    "products": [
+      {
+        "product_id": "notebook_hardcover_red",
+        "name": "Red Notebook",
+        "price": 19.99
+      }
+    ]
+  }
+  {
+    "customer_id": "customer-2222",
+    "order_id":"order-3333",
+    "products": [
+      {
+        "product_id": "notebook_hardcover_red",
+        "name": "Red Notebook",
+        "price": 19.99
+      },
+      {
+        "product_id": "notebook_hardcover_blue",
+        "name": "Blue Notebook",
+        "price": 18.99
+      }
+    ]
+  }
+  //GET methods
+  •	Get the price and name for a given product
+  http://localhost:8080/products/notebook_hardcover_red
+
+  •	Get all the items for a given order
+  http://localhost:8080/orders/order-3333
+
+  •	Get all the orders for a given customer
+  http://localhost:8080/orders/customer/customer-2222
+
+
